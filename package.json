@@ -1,0 +1,17 @@
+{
+  "name": "datavisualisatie-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path sass ./src/styles/main-screen.scss ./src/static/styles/main-screen.css",
+    "sass": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "Victor Boucher",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4"
+  }
+}

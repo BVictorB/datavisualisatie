@@ -1,0 +1,147 @@
+/* -------------------------------------------------------------------------- */
+/*                                   Global                                   */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   Colors                                   */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                Font Weights                                */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Breakpoint                                 */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                              Transition Speeds                             */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Transitions                                */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                               Min Breakpoint                               */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                               Max Breakpoint                               */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                               Linear Gradient                              */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Placeholder                                */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Base Styles                                */
+/* -------------------------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0; }
+
+html,
+body {
+  height: 100%; }
+
+body {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+  overflow-x: hidden; }
+
+input,
+textarea,
+button,
+select,
+a,
+div,
+span {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+/* -------------------------------------------------------------------------- */
+/*                                  Elements                                  */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   Modules                                  */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                    Pages                                   */
+/* -------------------------------------------------------------------------- */
+.p-home {
+  background-color: #222629;
+  height: 800vh; }
+  .p-home h1, .p-home h2 {
+    color: #FFBF00;
+    font-size: 90px;
+    font-family: 'Montserrat', sans-serif; }
+  .p-home h3 {
+    color: #FFBF00;
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif; }
+  .p-home p {
+    color: #DBDBDB;
+    font-size: 40px;
+    font-family: 'Work Sans', sans-serif;
+    margin: 50px 0 30px; }
+    .p-home p span {
+      color: #FFBF00;
+      font-family: 'Montserrat', sans-serif; }
+  .p-home section {
+    background-color: #222629;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; }
+    .p-home section .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 50px; }
+  .p-home .bar-chart {
+    width: 100%;
+    height: 60px;
+    background-color: #6A6E70;
+    border-radius: 0 50px 50px 0; }
+    .p-home .bar-chart__percentage {
+      background-color: #FFBF00;
+      height: 100%;
+      border-radius: 0 50px 50px 0;
+      transition: width 1s ease-in-out; }
+    .p-home .bar-chart .percentage-33 {
+      width: 0; }
+    .p-home .bar-chart .percentage-66 {
+      width: 0; }
+  .p-home .visible {
+    opacity: 1; }
+    .p-home .visible .svg-animation path {
+      transform: translateX(0);
+      opacity: 1; }
+    .p-home .visible .percentage-33 {
+      width: 33%; }
+    .p-home .visible .percentage-66 {
+      width: 66%; }
+  .p-home .section-1 svg path {
+    transform: translateX(-100vw);
+    opacity: 0;
+    transition: transform 800ms ease-in-out, opacity 1s ease-in-out; }
+  .p-home .section-1 svg path:nth-child(0) {
+    transition-delay: 0s; }
+  .p-home .section-1 svg path:nth-child(1) {
+    transition-delay: 0.05s; }
+  .p-home .section-1 svg path:nth-child(2) {
+    transition-delay: 0.1s; }
+  .p-home .section-1 svg path:nth-child(3) {
+    transition-delay: 0.15s; }
+  .p-home .section-1 svg path:nth-child(4) {
+    transition-delay: 0.2s; }
+  .p-home .section-1 svg path:nth-child(5) {
+    transition-delay: 0.25s; }
+  .p-home .section-1 svg path:nth-child(6) {
+    transition-delay: 0.3s; }
+  .p-home .section-1 svg path:nth-child(7) {
+    transition-delay: 0.35s; }
+  .p-home .section-1 svg path:nth-child(8) {
+    transition-delay: 0.4s; }
+  .p-home .section-1 svg path:nth-child(9) {
+    transition-delay: 0.45s; }
+  .p-home .section-4 svg text {
+    fill: #DBDBDB; }

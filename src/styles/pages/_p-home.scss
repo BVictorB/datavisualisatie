@@ -1,0 +1,106 @@
+.p-home {
+    background-color: $bg;
+    height: 800vh;
+
+    h1, h2 {
+        color: $color;
+        font-size: 90px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    h3 {
+        color: $color;
+        font-size: 70px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    p {
+        color: $white;
+        font-size: 40px;
+        font-family: 'Work Sans', sans-serif;
+        margin: 50px 0 30px;
+
+        span {
+            color: $color;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+
+    section {
+        background-color: $bg;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 50px;
+        }
+    }
+
+    .bar-chart {
+        width: 100%;
+        height: 60px;
+        background-color: $grey;
+        border-radius: 0 50px 50px 0;
+
+        &__percentage {
+            background-color: $color;
+            height: 100%;
+            border-radius: 0 50px 50px 0;
+            transition: width 1s ease-in-out;
+        }
+
+        .percentage-33 {
+            width: 0;
+        }
+
+        .percentage-66 {
+            width: 0;
+        }
+    }
+
+    .visible {
+        opacity: 1;
+
+        .svg-animation {
+            path {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .percentage-33 {
+            width: 33%;
+        }
+
+        .percentage-66 {
+            width: 66%;
+        }
+    }
+
+    .section-1 {
+        svg path {
+            transform: translateX(-100vw);
+            opacity: 0;
+            transition: transform 800ms ease-in-out, opacity 1s ease-in-out;
+        }
+    
+        @for $i from 0 through 9 {
+            svg path:nth-child(#{$i}) {
+                transition-delay: #{$i * .05}s;
+            }
+        }
+    }
+
+    .section-4 {
+        svg text {
+            fill: $white;
+        }
+    }
+}
