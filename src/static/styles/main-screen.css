@@ -61,6 +61,27 @@ span {
 /* -------------------------------------------------------------------------- */
 /*                                   Modules                                  */
 /* -------------------------------------------------------------------------- */
+.m-desktop-only {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: red;
+  color: white;
+  text-align: center;
+  z-index: 100;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  display: none;
+  padding: 50px; }
+  .m-desktop-only p {
+    margin: auto; }
+
+@media (max-width: 1400px) {
+  body {
+    overflow: hidden; }
+  .m-desktop-only {
+    display: flex; } }
+
 /* -------------------------------------------------------------------------- */
 /*                                    Pages                                   */
 /* -------------------------------------------------------------------------- */
@@ -246,7 +267,7 @@ span {
   .p-home .section-5 svg:nth-of-type(2) path:nth-child(17) {
     transition-delay: .35s; }
   .p-home .section-8 svg {
-    width: 50%; }
+    width: 35%; }
   .p-home .section-10 svg {
     display: block;
     height: 250px;
