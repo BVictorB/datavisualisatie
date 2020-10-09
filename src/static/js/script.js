@@ -56,6 +56,11 @@ const arrowNav = (e) => {
     const activeSectionClass = activeSection.classList[0]
     const activeNumber = parseInt(activeSectionClass.replace(/[^\d.]/g, ''))
 
+    if (activeNumber == 9 && e.target.classList[0] == 'arrow-down') {
+        navSection.style.display = 'none'
+        document.body.style.overflow = 'auto';
+        checkbox.checked = false;
+    }
 
     if (activeNumber != 10 && e.target.classList[0] == 'arrow-down') {
         sections[activeNumber].classList.remove('visible')
@@ -67,7 +72,6 @@ const arrowNav = (e) => {
 }
 
 const chooseNav = (e) => {
-    console.log(e.target.checked)
     if (e.target.checked) {
         navSection.style.display = 'block'
         document.body.style.overflow = 'hidden';
@@ -81,3 +85,4 @@ window.addEventListener('scroll', scrollFunction)
 checkbox.addEventListener('click', chooseNav)
 arrowDown.addEventListener('click', arrowNav)
 arrowUp.addEventListener('click', arrowNav)
+arrowNav

@@ -76,7 +76,7 @@ span {
   .m-desktop-only p {
     margin: auto; }
 
-@media (max-width: 1400px) {
+@media (max-width: 800px) {
   body {
     overflow: hidden; }
   .m-desktop-only {
@@ -91,23 +91,33 @@ span {
   .p-home h1,
   .p-home h2 {
     color: #FFBF00;
-    font-size: 90px;
+    font-size: 60px;
     font-family: 'Montserrat', sans-serif; }
+    @media (max-width: 800px) {
+      .p-home h1,
+      .p-home h2 {
+        font-size: 40px; } }
   .p-home h3 {
     color: #FFBF00;
-    font-size: 70px;
+    font-size: 50px;
     font-family: 'Montserrat', sans-serif; }
+    @media (max-width: 800px) {
+      .p-home h3 {
+        font-size: 30px; } }
   .p-home p {
     color: #DBDBDB;
-    font-size: 40px;
+    font-size: 25px;
     font-family: 'Work Sans', sans-serif;
-    margin: 50px 0 30px;
+    margin: 25px 0;
     transform: translateX(-100vw);
     transition: transform 800ms ease-in-out, opacity 1s ease-in-out; }
     .p-home p em {
       color: #FFBF00;
       font-style: normal;
       font-family: 'Montserrat', sans-serif; }
+    @media (max-width: 800px) {
+      .p-home p {
+        font-size: 20px; } }
   .p-home section {
     width: 100vw;
     height: 100vh;
@@ -141,6 +151,9 @@ span {
           .p-home section .container__thirds__column:nth-of-type(2) {
             border-left: 1px solid #FFBF00;
             border-right: 1px solid #FFBF00; }
+            @media (max-width: 1300px) {
+              .p-home section .container__thirds__column:nth-of-type(2) {
+                width: 30%; } }
   .p-home .navigation {
     width: 100vw;
     height: 100vh;
@@ -301,6 +314,9 @@ span {
     display: block;
     height: 250px;
     margin: 60px auto; }
+    @media (max-width: 1300px) {
+      .p-home .section-10 svg {
+        height: 150px; } }
     .p-home .section-10 svg:first-of-type {
       margin-top: 232px; }
   .p-home .section-10 p {
