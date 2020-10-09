@@ -1,4 +1,8 @@
 const sections = document.querySelectorAll('[class^=section-]')
+const navSection = document.querySelector('.navigation')
+const arrowUp = document.querySelector('.arrow-up')
+const arrowDown = document.querySelector('.arrow-down')
+const checkbox = document.querySelector('.checkbox')
 
 const scrollFunction = () => {
     const scrollPosition = window.scrollY
@@ -47,4 +51,33 @@ const removeClass = (visibleSections) => {
     })
 }
 
+const arrowNav = (e) => {
+    const activeSection = document.querySelector('.visible')
+    const activeSectionClass = activeSection.classList[0]
+    const activeNumber = parseInt(activeSectionClass.replace(/[^\d.]/g, ''))
+
+
+    if (activeNumber != 10 && e.target.classList[0] == 'arrow-down') {
+        sections[activeNumber].classList.remove('visible')
+        sections[activeNumber + 1].classList.add('visible')
+    } else if (activeNumber != 0 && e.target.classList[0] == 'arrow-up'){
+        sections[activeNumber].classList.remove('visible')
+        sections[activeNumber - 1].classList.add('visible')
+    }
+}
+
+const chooseNav = (e) => {
+    console.log(e.target.checked)
+    if (e.target.checked) {
+        navSection.style.display = 'block'
+        document.body.style.overflow = 'hidden';
+    } else {
+        navSection.style.display = 'none'
+        document.body.style.overflow = 'auto';
+    }
+}
+
 window.addEventListener('scroll', scrollFunction)
+checkbox.addEventListener('click', chooseNav)
+arrowDown.addEventListener('click', arrowNav)
+arrowUp.addEventListener('click', arrowNav)

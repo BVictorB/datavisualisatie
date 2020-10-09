@@ -68,7 +68,7 @@ span {
   background-color: red;
   color: white;
   text-align: center;
-  z-index: 100;
+  z-index: 999999;
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   display: none;
@@ -141,20 +141,49 @@ span {
           .p-home section .container__thirds__column:nth-of-type(2) {
             border-left: 1px solid #FFBF00;
             border-right: 1px solid #FFBF00; }
-    .p-home section .arrow {
+  .p-home .navigation {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    z-index: 200;
+    display: none; }
+    .p-home .navigation .arrow-up {
+      cursor: pointer;
+      position: absolute;
+      left: 50%;
+      width: 100px;
+      top: 50px;
+      transform: translate(-50%, 0) rotate(180deg);
+      transition: transform 400ms ease-in-out; }
+      .p-home .navigation .arrow-up:hover {
+        transform: translate(-50%, -5px) rotate(180deg); }
+    .p-home .navigation .arrow-down {
+      cursor: pointer;
       position: absolute;
       left: 50%;
       width: 100px;
       bottom: 50px;
-      animation: moveArrow 2s ease-in-out infinite; }
-
-@keyframes moveArrow {
-  0% {
-    transform: translate(-50%, 0); }
-  50% {
-    transform: translate(-50%, -30px); }
-  100% {
-    transform: translate(-50%, 0); } }
+      transform: translate(-50%, 0);
+      transition: transform 400ms ease-in-out; }
+      .p-home .navigation .arrow-down:hover {
+        transform: translate(-50%, 5px); }
+  .p-home .choose-navigation {
+    position: fixed;
+    width: 100vw;
+    height: 20px;
+    transform: translateX(0);
+    z-index: 400; }
+    .p-home .choose-navigation__container {
+      position: absolute;
+      top: 50px;
+      right: 50px; }
+    .p-home .choose-navigation label {
+      color: #DBDBDB;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px; }
   .p-home .scroll {
     overflow-y: scroll;
     height: 100%;
